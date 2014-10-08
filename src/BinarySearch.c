@@ -21,7 +21,7 @@ int binarySearch( int target, int array[], int startIndex, int endIndex ){
 			// return array[Ans+1];
 		// else if( array[Ans-1] == target)
 			// return array[Ans-1];		
-		binarySearch( target, array, Ans ,  midIndex);
+	//	binarySearch( target, array, Ans ,  midIndex);
 	}
 	
 	if( target > array[midIndex] ){	
@@ -34,7 +34,7 @@ int binarySearch( int target, int array[], int startIndex, int endIndex ){
 			// return array[Ans+1];
 		// else if( array[Ans-1] == target)
 			// return array[Ans-1];
-		binarySearch( target, array, midIndex, Ans );
+	//	binarySearch( target, array, midIndex, Ans );
 	}
 	
 
