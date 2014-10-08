@@ -3,22 +3,40 @@
 
 int binarySearch( int target, int array[], int startIndex, int endIndex ){
 
-	int midIndex;
-	midIndex = (startIndex + endIndex)/2;
+	int midIndex, Ans;
+	
+	midIndex= (startIndex + endIndex)/2;
+	printf("%d\n", array[midIndex]);
+	
+	if( target == array[midIndex] )
+		return array[midIndex];
 	
 	if( target < array[midIndex] ){	
-		midIndex = (startIndex + midIndex)/2;
+		Ans = (startIndex + midIndex)/2;
+		printf("%d\n", array[Ans]);
 		
-		if( array[midIndex] == target)
-		return array[midIndex];
-
+		if( array[Ans] == target)
+			return array[Ans];
+		// else if( array[Ans+1] == target)
+			// return array[Ans+1];
+		// else if( array[Ans-1] == target)
+			// return array[Ans-1];		
+		binarySearch( target, array, Ans ,  midIndex);
 	}
 	
 	if( target > array[midIndex] ){	
-		midIndex = (endIndex + midIndex)/2;
+		Ans = (endIndex + midIndex)/2;
+		printf("%d\n", array[Ans]);
 		
-		if( array[midIndex] == target)
-		return array[midIndex];
+		if( array[Ans] == target)
+			return array[Ans];
+		// else if( array[Ans+1] == target)
+			// return array[Ans+1];
+		// else if( array[Ans-1] == target)
+			// return array[Ans-1];
+		binarySearch( target, array, midIndex, Ans );
 	}
+	
+
 
 }
